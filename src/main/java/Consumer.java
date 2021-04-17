@@ -26,7 +26,6 @@ public class Consumer {
                 long offset = consumerRecord.offset();
                 String key = consumerRecord.key();
                 String value = consumerRecord.value();
-
                 System.out.println("topic:" + topic + " offset:" + offset + " key:" + key + " value:" + value);
 
             }
