@@ -30,11 +30,11 @@ public class ZK {
         for (String item : Items) {
             System.out.println(item);
         }
-//        {"version":1,"config":{"producer_byte_rate":"1024","consumer_byte_rate":"1"}}
-        zk.setData("/config/clients/test", "{\"version\":1,\"config\":{\"producer_byte_rate\":\"1\",\"consumer_byte_rate\":\"2\"}".getBytes(), -1);
-        byte[] bytes = zk.getData("/config/clients/test", true, null);
-        System.out.println(new String(bytes));
 
+//        {"version":1,"config":{"producer_byte_rate":"1024","consumer_byte_rate":"1"}}
+        zk.setData("/config/clients/p1", "{\"version\":1,\"config\":{\"producer_byte_rate\":\"99990249\",\"consumer_byte_rate\":\"2\"}".getBytes(), -1);
+        byte[] bytes = zk.getData("/config/clients/p1", true, null);
+        System.out.println(new String(bytes));
 
 //        zk.delete("/root/childone", -1);
         zk.close();
